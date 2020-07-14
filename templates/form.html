@@ -1,35 +1,86 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE <html>
+<!-- The form section was adapted from Patrick's flask lesson-->
+<html lang="en" dir="ltr">
+<meta charset="utf-8">
 <head>
+	<style>
+	h1 {
+		text-align: center;
+		text-shadow: 0 2px 8px rgba(128,128,128,1);
+		margin: 60px 89px 0 90px;
+		font-weight: 400;
+		font-size: 6rem;
+		font-family: verdana;
+		color:#FAF2F0
+	}
+	body {
+		background-image: url('/static/worship.jpg');
+		background-size: 100%
+	}
+	p {
+		margin: 10px 89px 0;
+		font-weight: 400;
+		font-size: 1.5rem;
+		font-family: verdana
+	}
+	input[type=text] {
+		width: 75%;
+		padding: 20px 20px;
+		margin: 10px 0;
+		box-sizing: border-box;
+		font-size: 1rem;
+	}
+	input[type=number] {
+		width: 40%;
+		padding: 20px 20px;
+		margin: 10px 0;
+		box-sizing: border-box;
+		font-size: 1rem;
+	}
+	input[type=range] {
+		width: 35%;
+	}
+	::placeholder {
+  font-style: italic;
+	}
+	</style>
 	<title>Worship Setlist Generator</title>
 </head>
 <body>
-	<form action="/submit">
-		<p>
-			<label for="Verse 1">Verse 1</label><br>
-			<input type="text" name="Verse 1">
-		</p>
-		<p>
-			<label for="Verse 2">Verse 2</label><br>
-			<input type="text" name="Verse 2">
-		</p>
-		<p>
-			<label for="Verse 3">Verse 3</label><br>
-			<input type="text" name="Verse 3">
-		</p>
-		<p>
-			<label for="Themes">Themes</label><br>
-			<input type="text" name="Themes">
-		</p>
-		<p>
-			<label for="Number of Songs">Number of Songs</label><br>
-			<input type="number" name="Number of Songs">
-		</p>
-		<p>
-			<label for="High/Low Energy Ratio">High/Low Energy Ratio</label><br>
-			<input type="range" name="High/Low Energy Ratio">
-		</p>
-		<p><button type="submit">Submit</button></p>
-	</form>
+	<h1 style=margin:50px>Worship Setlist Generator</h1>
+
+	<div style="width:100%; display:table-row">
+		<div style="display:table-cell">
+			<form action="/submit" style="color:#FAF2F0">
+				<p>
+					<input type="text" placeholder="Verse 1" name="Verse 1">
+				</p>
+				<p>
+					<input type="text" placeholder="Verse 2" name="Verse 2">
+				</p>
+				<p>
+					<input type="text" placeholder="Verse 3" name="Verse 3">
+				</p>
+				<p>
+					<input type="text" placeholder="Themes/Keywords" name="Themes">
+				</p>
+				<p>
+					<input type="number" placeholder="Number of Songs" name="Number of Songs" min="0" max="100">
+				</p>
+				<p style="margin: 20px 89px; font-size: 1.5rem">
+					<label for="Praise/Worship Songs">Praise</label>
+					<input type="range" name="Praise/Worship Songs">
+					<label for="Prase/Worship Songs">Worship</label>
+				</p>
+				<p><button type="submit">Submit</button></p>
+			</form>
+		</div>
+		<div style="width: 60%; display:table-cell; background: rgba(207, 207, 207, 0.5)">
+			<p style="color:#000000; text-align:justify;"><strong>
+				<br><br>Welcome! <br><br>To retrieve the setlist for your next service, simply type in up to three
+				verses (e.g. "John 3:16") and a few of your message's themes (e.g. "forgiveness, love, grace"), and a setlist will be generated matching your week's message. <br><br> You can also set the number of songs in your setlist and the flow of the music (upbeat or "praise" songs vs. slower "worship" songs). <br><br> Enjoy!<strong>
+			</p>
+		</div>
+	</div>
 </body>
 </html>
