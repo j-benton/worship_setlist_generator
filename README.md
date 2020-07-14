@@ -29,7 +29,7 @@ For my Bible data, I deemed cleaning to be unnecessary, as I was pulling commonl
 
 ### Data Processing (NLP)
 
-![](../spacy.png)
+![](/assets/spacy.png)
 
 To process this text data, I used spaCy's robust NLP package that allows for many kinds of data transformations and tagging.
 
@@ -51,7 +51,7 @@ Perhaps the most important tool for my project in spaCy's toolkit is its `.simil
 
 Here is a workflow diagram of my model, follwed by an explanation of how it works:
 
-![](../workflow.png)
+![](/assets/workflow.png)
 
 To create my setlist generator, I defined a function that takes in four arguments:
 
