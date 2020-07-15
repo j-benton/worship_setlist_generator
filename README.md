@@ -68,6 +68,17 @@ Next, songs are sorted again, this time by number of times a song appeared in th
 
 Finally, a setlist is generated, taking the highest *n*-number of upbeat songs and slower songs as specified by the user (here *n* refers to the ratio argument). The nomenclature common in churches to refer to these different kinds of songs is "praise" for upbeat songs and "worship" for slower songs. I adopt that verbage here. 
 
+Here is a screenshot of my locally hosted Flask application home page, with the input fields described above:
+
+![](/assets/wsg1.png)
+
+Here is what the application looks like with the fields populated:
+
+![](/assets/wsg2.png)
+
+And here is the return page, with a setlist curated to the specified inputs:
+
+![](/assets/wsg3.png)
 
 
 ### Model "Testing"
